@@ -52,6 +52,11 @@ function main(sources) {
     router: Rx.Observable.just(createLocation('/nested/route'))
   }
 }
+
+run(main, {
+  DOM: makeDOMDriver('.container'),
+  makeRouterDriver({hash: true})
+})
 ```
 
 ## API
