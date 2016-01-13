@@ -105,8 +105,9 @@ import {makeRouterDriver} from 'cycle-router'
     - props$ :: Rx.Observable<any> - Observable of any sort of props to pass around
 
 
-- `createLocation(options)`
-- `createHref(options)`
+
+##### `createLocation(options)`
+##### `createHref(options)`
 ```js
 import {createLocation, createHref} from 'cycle-router'
 ```
