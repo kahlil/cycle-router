@@ -43,7 +43,7 @@ function Component(sources) {
 
 function main(sources) {
   const props$ = Rx.Observable.just({color: '#000000'})
-  const nestedRoute$ = sources.router.path('nested', props$)
+  const nestedRoute$ = sources.router.path('/nested', props$)
 
   const vTree$ = Component({router: nestedRoute$, ...sources})
 
