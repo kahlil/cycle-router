@@ -78,8 +78,8 @@ import {makeRouterDriver} from 'cycle-router'
 ##### `routerDriver(history$)`
 
 **Arguments** :
-  - history$ :: Rx.Observable<Object>
-    - `pathname` :: String - (Required) - A string that is used to change the url
+  - history$ :: Rx.Observable&lt;Object&gt;
+    - `pathname :: String` - (Required) - A string that is used to change the url
     - All other options from [rackt/history location object](https://github.com/rackt/history/blob/master/docs/Glossary.md#location)
 
 **returns** :
@@ -88,21 +88,21 @@ import {makeRouterDriver} from 'cycle-router'
 ###### **RouterObject**
   - Keys
     - namespace :: Array - Array of pathnames
-    - observable :: Rx.observable<([Location](https://github.com/rackt/history/blob/master/docs/Glossary.md#location)> - An observable of the current Location filtered from the namespace
+    - observable :: Rx.observable&lt;([Location](https://github.com/rackt/history/blob/master/docs/Glossary.md#location)&gt; - An observable of the current Location filtered from the namespace
     - path(path [, props$]) :: Function -
       - **Arguments**
         - path :: string (Required) - a string used to append to the namespace
-        - props$ :: Rx.observable<any> (options) - and obervable props$ to be passed along
+        - props$ :: Rx.observable&lt;any&gt; (options) - and obervable props$ to be passed along
       - **Returns**
         (RouterObject)
     - define(routeDefinition[, props$]) :: Function -
       - **Arguments**
-        - routeDefinition :: Object<Route: any> - An object of routes for values and any kind of value. see [switch-path](https://github.com/staltz/switch-path) for more information
-        - props$ :: Rx.Observable<any> - An optional props observable
+        - routeDefinition :: Object&lt;Route: any&gt; - An object of routes for values and any kind of value. see [switch-path](https://github.com/staltz/switch-path) for more information
+        - props$ :: Rx.Observable&lt;any&gt; - An optional props observable
       - **Returns**
-        - Rx.Observable<Object> - and Observable containing a collection with the current `path` and `value` from the switchPath() function. `fullPath` - the entire path being matched and `routeDefinitions` for access to the defined routes. `props$` and Rx.Observable<any>. `props$` is inherited from the last .path() if not defined directly.
+        - Rx.Observable&lt;Object&gt; - and Observable containing a collection with the current `path` and `value` from the switchPath() function. `fullPath` - the entire path being matched and `routeDefinitions` for access to the defined routes. `props$` and Rx.Observable&lt;any&gt;. `props$` is inherited from the last .path() if not defined directly.
 
-    - props$ :: Rx.Observable<any> - Observable of any sort of props to pass around
+    - props$ :: Rx.Observable&lt;any&gt; - Observable of any sort of props to pass around
 
 
 
