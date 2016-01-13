@@ -96,6 +96,7 @@ import {makeRouterDriver} from 'cycle-router'
         - props$ :: Rx.Observable<any> - An optional props observable
       - **Returns**
         - Rx.Observable<Object> - and Observable containing a collection with the current `path` and `value` from the switchPath() function. `fullPath` - the entire path being matched and `routeDefinitions` for access to the defined routes. `props$` and Rx.Observable<any>. `props$` is inherited from the last .path() if not defined directly.
+
     - props$ :: Rx.Observable<any> - Observable of any sort of props to pass around
 
 
