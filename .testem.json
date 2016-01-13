@@ -1,0 +1,19 @@
+{
+  "framework": "mocha",
+  "test_page": "test/page/index.html",
+  "src_files": [
+    "test/index.js"
+  ],
+  "before_tests": "browserify test/index.js -t babelify -o test/page/bundle.js",
+  "serve_files": [
+    "test/bundle.js"
+  ],
+  "after_tests": "rm test/page/bundle.js",
+  "launch_in_ci": [
+    "firefox"
+  ],
+  "launch_in_dev": [
+    "chrome"
+  ],
+  "ignore_missing_launchers": true
+}

@@ -1,0 +1,54 @@
+{
+  "name": "cycle-router",
+  "version": "0.0.0",
+  "description": "Router for Cycle.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint src/",
+    "test-ci": "testem ci",
+    "test": "npm run lint && testem && npm run test-ci",
+    "prebuild": "rm -rf lib/ && mkdir -p lib/",
+    "build": "browserify -t babelify src/index.js -o lib/index.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylors/cyclejs-router.git"
+  },
+  "keywords": [
+    "Cycle",
+    "Cycle.js",
+    "router",
+    "history"
+  ],
+  "author": "Tylor Steinberger <tlsteinberger167@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tylors/cyclejs-router/issues"
+  },
+  "homepage": "https://github.com/tylors/cyclejs-router#readme",
+  "peerDependencies": {
+    "rx": "*"
+  },
+  "devDependencies": {
+    "@cycle/core": "^6.0.0",
+    "rx": "4.0.7",
+    "assert": "^1.3.0",
+    "babel-eslint": "^4.1.6",
+    "babel-plugin-syntax-object-rest-spread": "^6.3.13",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "eslint": "^1.0.0",
+    "eslint-config-cycle": "^3.2.0",
+    "eslint-plugin-cycle": "^1.0.2",
+    "eslint-plugin-no-class": "^0.1.0",
+    "mocha": "^2.3.4",
+    "testem": "^0.9.11"
+  },
+  "dependencies": {
+    "history": "^1.17.0",
+    "switch-path": "^1.1.3"
+  }
+}
