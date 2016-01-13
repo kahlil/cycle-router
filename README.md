@@ -55,7 +55,7 @@ function main(sources) {
 
 run(main, {
   DOM: makeDOMDriver('.container'),
-  makeRouterDriver({hash: true})
+  router: makeRouterDriver({hash: true})
 })
 ```
 
